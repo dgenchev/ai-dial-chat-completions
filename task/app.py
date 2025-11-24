@@ -20,9 +20,9 @@ async def start(stream: bool) -> None:
     # 1.2. Create CustomDialClient
     custom_dial_client = CustomDialClient(deployment_name)
     
-    # For testing: use CustomDialClient to see request/response (TODO item 10)
-    # To test with DialClient, change this to: client = dial_client
-    client = custom_dial_client
+    # Use DialClient for clean output (matches expected behavior)
+    # To debug with request/response details, change this to: client = custom_dial_client
+    client = dial_client
     
     # 2. Create Conversation object
     conversation = Conversation()
